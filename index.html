@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clima en Santander, Cantabria</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="contenedor">
+            <h1>Clima en Santander, Cantabria</h1>
+
+            <div class="tarjeta-clima">
+                <div class="cargando" id="cargando">
+                    <p>Cargando informacion del clima...</p>
+                </div>
+
+                <div class="informacion-clima" id="informacion-clima" style="display: none;">
+                    <div class="temperatura">
+                        <span id="temperatura">--</span>
+                        <span class="grados">°C</span>
+                    </div>
+
+                    <div class="detalles">
+                        <p class="ciudad" id="ciudad">--</p>
+                        <p class="fecha" id="fecha">--</p>
+                    </div>
+                </div>
+
+                <div class="error" id="error" style="display: none;">
+                    <p>Error al cargar la informacion del clima</p>
+                    <button onclick="obtenerClima()">Reintentar</button>
+                </div>
+            </div>
+
+            <button class="boton-actualizar" onclick="obtenerClima()">
+                Actualizar Clima
+            </button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
